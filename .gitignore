@@ -6,4 +6,8 @@
 .venv/
 
 # Ignore results folder
-results
+results/estimated/MLP/*
+results/estimated/RF/*
+results/statistics/*
+results/txt/MLP/*
+results/txt/RF/*
