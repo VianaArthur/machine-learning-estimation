@@ -5,6 +5,9 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split 
 from sklearn.neural_network import MLPRegressor
 
+#TODO:
+# Add log
+
 # Using function to calculate MAPE
 def mean_absolute_percentage_error(y_true, y_pred): 
   y_true= np.array(y_true)
@@ -38,7 +41,7 @@ result_array_r2_MLP2020 = np.array([])
 #Reads excel.xlsx file
 df = pd.concat(pd.read_excel('./data/Excel-Dataset.xlsx', sheet_name=None), ignore_index=True)
 #Export to CSV file
-df.to_csv('Data.csv', encoding='utf-8', index=False)
+df.to_csv('./data/Dataset.csv', encoding='utf-8', index=False)
 
 # Dataset samples, read .CSV file
 dataset = pd.read_csv('./data/Dataset.csv')
@@ -49,7 +52,7 @@ x = dataset.iloc[:, 1:].values  #Predictors
 y = dataset.iloc[:, 0].values  #To be Predicted
 y = y.reshape(-1, 1) # needs 2D vector
 
-# For loop to vary the seed and train the MLP "i" times
+# For loop to vary the seed and train "i" times
 for i in range(1,31):
   # splitting Dataset  samples
   x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 1/3, random_state=None)
@@ -68,14 +71,14 @@ for i in range(1,31):
     hidden_layer_sizes=(5,5),      
     activation='tanh',          
     solver='adam',                
-    max_iter=1000,
+    max_iter=1500,
     random_state=None) 
   
   regressor_MLP_2020 = MLPRegressor(        
     hidden_layer_sizes=(20,20),      
     activation='tanh',          
     solver='adam',                
-    max_iter=1000,
+    max_iter=1500,
     random_state=None) 
   
   # Fit the model to data matrix X and target(s) y.
