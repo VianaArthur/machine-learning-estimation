@@ -4,3 +4,6 @@
 # Ignore directory .vscode/ and .venv/
 .vscode/
 .venv/
+
+# Ignore results folder
+results
