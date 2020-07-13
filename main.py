@@ -70,15 +70,15 @@ for i in range(1,31):
   regressor_MLP_55 = MLPRegressor(        
     hidden_layer_sizes=(5,5),      
     activation='tanh',          
-    solver='adam',                
-    max_iter=1500,
+    solver='lbfgs',                
+    max_iter=1000,
     random_state=None) 
   
   regressor_MLP_2020 = MLPRegressor(        
     hidden_layer_sizes=(20,20),      
     activation='tanh',          
-    solver='adam',                
-    max_iter=1500,
+    solver='lbfgs',                
+    max_iter=1000,
     random_state=None) 
   
   # Fit the model to data matrix X and target(s) y.
