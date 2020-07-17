@@ -11,3 +11,7 @@ results/estimated/RF/*
 results/statistics/*
 results/txt/MLP/*
 results/txt/RF/*
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
