@@ -7,10 +7,19 @@
 
 # Ignore results folder
 results/estimated/MLP/*
+!results/estimated/MLP/mlp.txt
+
 results/estimated/RF/*
+!results/estimated/RF/rf.txt
+
 results/statistics/*
+!results/statistics/stats.txt
+
 results/txt/MLP/*
+!results/txt/MLP/mlp.txt
+
 results/txt/RF/*
+!results/txt/RF/rf.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
